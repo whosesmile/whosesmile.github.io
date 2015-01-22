@@ -12,13 +12,14 @@
   };
 
   function animate() {
+    panel.empty();
     words.split('').forEach(function (letter, i) {
       setTimeout(function () {
         $('<span class="font">' + letter + '</span>').css('color', colors()).appendTo(panel);
       }, i * 350);
     });
 
-    setTimeout(animate, words.split('').length * 400);
+    setTimeout(animate, words.split('').length * 450);
   }
 
   animate();

@@ -2,7 +2,7 @@
   'use strict';
 
   var panel = $('.simular');
-  var words = '李二喵你老公叫你回家吃饭饭啦';
+  var words = '李二喵，你老公要回家吃饭饭饭';
 
   var colors = function () {
     var number = function () {

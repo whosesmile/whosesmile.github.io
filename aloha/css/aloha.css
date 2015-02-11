@@ -33,3 +33,4 @@ body { background: #f5f5f5  url(../images/design.png) center -128px no-repeat; o
 .spotlight .list li > span { display: block; font-size: 24px; color: #999999; margin-bottom: 10px; }
 footer { padding: 30px; }
 footer .install { background-color: #fc5255; color: #fff; text-decoration: none; display: block; text-align: center; height: 90px; line-height: 90px; border-radius: 5px; font-size: 24px; font-weight: bold; }
+footer .install:active {opacity: 0.8;}

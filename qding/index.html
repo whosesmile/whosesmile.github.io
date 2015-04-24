@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>千丁互联 - 生成分享链接</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=640,user-scalable=no" />
+    <link rel="stylesheet" href="http://front.qdingnet.com/public/bootstrap/dist/css/bootstrap.min.css"/>
+    <style type="text/css">* {font-size:14px!important;}</style>
+    <script src="http://front.qdingnet.com/public/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="page-header"><h2 class="text-center" style="font-size:18px!important;">千丁互联 - 生成分享链接</h2></div>
+
+    <div style="width:640px;margin:0 auto; padding-top:50px;">
+
+      <form class="form-horizontal" method="post" onsubmit="return false;">
+        <div class="form-group">
+          <label class="col-sm-3 control-label">发布平台:</label>
+          <div class="col-sm-9">
+            <select class="form-control">
+              <option>选择发布平台</option>
+              <option value="dev">开发平台</option>
+              <option value="qa">测试平台</option>
+              <option value="online">线上环境</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">商品主键:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="填写商品ID" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <button class="btn btn-success btn-block">生成分享链接</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <textarea class="form-control" placeholder="这里会生成分享地址..." style="height:100px;"></textarea>
+          </div>
+        </div>
+
+      </form>
+      
+    </div>
+
+    <script type="text/javascript">
+      var map = {
+        dev: {
+          pid: 859,
+          appid: 'wxfe0885cd2b2ed496',
+          domain: 'http://devboss.qdingnet.com'
+        },
+        qa: {
+          pid: 853,
+          appid: 'wx0a6dc862d037ca98',
+          domain: 'http://qaboss.qdingnet.com'
+        },
+        online: {
+          pid: 241,
+          appid: 'wxd23d0632ad28c805',
+          domain: 'http://boss.qdingnet.com'
+        },
+      };
+
+      function getRedirectUrl(data, path) {
+        return encodeURIComponent(data.domain + '/p/share?pid=' + data.pid + '&shareRedirectUrl=' + encodeURIComponent(path));
+      }
+
+      function getShareUrl(data, path) {
+        return 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + data.appid + '&redirect_uri=' + getRedirectUrl(data, path) + '&response_type=code&scope=snsapi_userinfo&state=share#wechat_redirect';
+      }
+
+      $('button').on('click', function () {
+        var type = $('select').val();
+        if (type) {
+          var data = map[type];
+          $('textarea').val(getShareUrl(data, 'details/' + $('input').val()));
+        }
+      });
+    </script>
+  </body>
+</html>

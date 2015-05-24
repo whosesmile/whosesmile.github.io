@@ -1,0 +1,9 @@
+.section { background: transparent url() center center no-repeat; background-size: 100% auto; }
+.section.home { background-image: url(../images/home/home.jpg); }
+.section.platform { background-image: url(../images/home/platform.jpg); }
+.section.product { background-image: url(../images/home/product.jpg); }
+.section.hardware { background-image: url(../images/home/hardware.jpg); }
+.section.about { background-image: url(../images/home/about.jpg); }
+.section.outlook { background-image: url(../images/home/outlook.jpg); }
+.section.jobs { background-image: url(../images/home/jobs.jpg); }
+.section.partners { background-image: url(../images/home/partners.jpg); }

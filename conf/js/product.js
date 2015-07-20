@@ -1,12 +1,10 @@
+// 滚动
 $(function () {
-  var offset = $('#header').height();
-  var buttons = $('#navButtons li');
-  buttons.each(function (index, button) {
-    $(button).on('click', function (e) {
-      $('html,body').animate({
-        scrollTop: offset + index * $('#slider').height() / $('#slider img').size()
-      });
-      buttons.removeClass('active').eq(index).addClass('active');
-    });
+  $('#slider').fullpage({
+    anchors: ['product_1', 'product_2', 'product_3', 'product_4', 'product_5', 'product_6', 'product_7'],
+    menu: '#anchors',
+    scrollingSpeed: 700,
+    paddingTop: '85px',
+    paddingBottom:'0px;'
   });
 });

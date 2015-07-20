@@ -11,13 +11,13 @@ body { background: #fff url(../images/trial/bg.jpg) center 0 repeat-x; backgroun
 .box.right .wrap h4 { font-weight: normal; font-size: 18px; margin: 5px 0 10px; }
 .box.right .wrap p { margin-bottom: 25px; }
 .form-group { margin-bottom: 10px; }
-.form-group label { font-size: 16px; float: left; width: 115px; text-align: left; line-height: 36px; }
-.form-control { box-sizing: border-box; display: block; margin-left: 95px; width: 518px; padding: 0 10px; height: 36px; font-size: 16px; border: 1px solid #a0a0a0; background-color: transparent; }
-.form-inline { margin-right: 19px; float:left; }
+.form-group label { font-size: 16px; float: left; width: 95px; text-align: left; line-height: 36px; }
+.form-control { box-sizing: border-box; display: block; margin-left: 95px; width: 537px; padding: 0 10px; height: 36px; font-size: 16px; border: 1px solid #a0a0a0; background-color: transparent; }
+.form-inline { float: left; width: 325px; }
 .form-inline label { width: 70px; }
 .form-inline .form-control { width: 212px; }
 .captcha { position: relative; }
 .captcha .form-control { width: 110px; }
 .captcha img { position: absolute; left: 219px; top: 0; }
 .submit-wrapper { width: 633px; text-align: right; margin-top: 20px; }
-.submit { box-sizing: border-box; background:transparent;display: inline-block; width: 140px; height: 47px; border: 1px solid #98509e; font-size: 18px; color: #822b89; border-radius: 3px; text-align: center; line-height: 47px; text-decoration: none; margin-left: 15px; }
+.submit { box-sizing: border-box; background: transparent; display: inline-block; width: 140px; height: 47px; border: 1px solid #98509e; font-size: 18px; color: #822b89; border-radius: 3px; text-align: center; line-height: 47px; text-decoration: none; margin-left: 15px; }
